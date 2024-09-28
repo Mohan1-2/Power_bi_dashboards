@@ -8,23 +8,76 @@ The CAERS database is a critical tool for the FDA, containing adverse event and 
 ### **Objective**
 
 The primary objective of analyzing the CFSAN Adverse Event Reporting System (CAERS) dataset is to gain a comprehensive understanding of adverse events associated with foods, dietary supplements, and cosmetics as reported to the FDA. This analysis aims to identify patterns and trends in these events, including the distribution across different product categories, the demographic characteristics of those affected, and the types and severities of reported symptoms and outcomes. By exploring these aspects, the analysis seeks to contribute valuable insights for enhancing product safety surveillance, informing regulatory policies, and ultimately improving public health outcomes by identifying potential risks and areas for intervention in the industries of food, dietary supplements, and cosmetics.
+
+## Data Source
+
+The analysis is based on the CAERS_ASCII_2004_2017Q2.csv file, which contains the following key fields:
+
+RA_Report: Unique identifier for each adverse event report.
+
+RA_CAERS Created Date: Date of report entry into the CAERS database.
+
+AEC_Event Start Date: Date the adverse event began.
+
+PRI_Product Role: Role of the product (suspect or concomitant).
+
+PRI_Reported Brand/Product Name: Product name associated with the event.
+
+PRI_FDA Industry Code & Name: Industry categorization (e.g., 'Bakery Prod/Dough/Mix/Icing', 'Ice Cream Prod').
+
+CI_Age at Adverse Event: Age of the affected individual.
+
+CI_Age Unit: Age measurement unit (years, months).
+
+CI_Gender: Gender of the affected individual.
+
+AEC_One Row Outcomes: Event outcomes (hospitalization, ER visit, etc.).
+
+SYM_One Row Coded Symptoms: Coded symptoms related to the event.
+
+## Part I : Data Cleaning, Modeling, and DAX in Power BI
+Data Importing and Preprocessing
+The dataset is imported into Power BI for initial exploration and examination. Data quality issues, including missing values and incorrect data types, are addressed.
+
+Data Analysis
+Product Role Categorization: Categorize products based on their role (suspect or concomitant) to analyze distribution across roles.
+
+Industry-Based Analysis: Group data by FDA industry names and examine the distribution of reports within various industries.
+
+Demographic and Gender Analysis: Analyze the demographic spread of adverse events based on age and gender.
+
+Symptom Frequency and Correlation: Investigate common symptoms and their correlations with patient age, using DAX for advanced calculations.
+
+Outcome and Industry Relationships: Analyze the relationship between industry types and adverse event outcomes, categorizing them by severity.
+
+Time Series Analysis: Conduct a time-based trend analysis of report submissions.
+
+Advanced Modeling with DAX: Develop predictive models for adverse event risks based on age, product type, and symptom severity
+
+## Part 2: Dashboard Building
+# Adverse Event Reporting Dashboard
+The dashboard provides key metrics on report frequency, common symptoms, and product types, with interactive filters for detailed analysis by industry, product role, age group, and gender.
+
+![image](https://github.com/user-attachments/assets/604880ad-17d1-44e1-8c7f-e347f7986c49)
+
+# Demographic Analysis
+The dashboard visualizes reporting trends over time and allows users to explore data by age and gender to identify demographic patterns in Adverse Event
+
+![image](https://github.com/user-attachments/assets/fb2c15f4-a964-46d5-8939-dc5db8372fef)
+
+#  Industry and outcome analysis
+Interactive visuals illustrate the correlation between industries and reported outcomes, providing insights into potential high-risk categories and trends
+
+![image](https://github.com/user-attachments/assets/db6df1f8-d460-449a-9ec3-f89103019671)
+
+
+
 ## Link for Dashboard
 Explore the dashboard at this link below to dive deeper into the data and uncover more opportunities for enhancing manufacturing efficiency.
 https://drive.google.com/file/d/1Vp3hX67uPlMUlHmBYVXQXc_jOcFDulNG/view?usp=sharing
-## Conclusion
-The comprehensive analysis of the CFSAN Adverse Event Reporting System (CAERS) dataset, spanning from 2004 to the second quarter of 2017, has provided valuable insights into the adverse events and product complaints related to foods, dietary supplements, and cosmetics. This dataset has enabled a standardized and detailed examination of adverse outcomes and associated symptoms across a wide range of products.
 
-Key findings from the analysis include:
+# Data Storytelling and Insights
+The dashboard integrates storytelling techniques to summarize key insights derived from the data, helping users quickly identify the most important findings. Key Features Comprehensive Data Analysis: Detailed examination of the adverse event data using Power BI, including DAX-driven insights and predictive modeling. Interactive Dashboard: User-friendly, accessible Power BI dashboard for exploring trends, correlations, and demographics.
 
-Product Categories: The distribution of adverse events across different product categories revealed significant variations. Foods and dietary supplements exhibited higher frequencies of adverse events compared to cosmetics, highlighting the need for targeted safety interventions in these areas.
-
-Symptom Severity and Types: The types and severities of reported symptoms varied widely, with some products being linked to more severe adverse outcomes. This information is instrumental in identifying high-risk products and informing regulatory actions to mitigate these risks.
-
-Trend Analysis: Temporal trends in the data revealed changes in the frequency and nature of adverse events over the years. This trend analysis can guide future monitoring efforts and help predict potential risks associated with emerging products.
-
-The insights derived from this analysis are essential for enhancing product safety surveillance and informing regulatory policies. By identifying patterns and trends in adverse events, we can proactively address potential risks and implement preventive measures to safeguard public health.
-
-The findings underscore the importance of continued vigilance and reporting to the CAERS database, as well as the need for ongoing research and collaboration between regulatory bodies, industry stakeholders, and healthcare professionals. This collaborative approach will be vital in improving the safety of foods, dietary supplements, and cosmetics, ultimately contributing to better health outcomes for consumers.
-
-Moving forward, it is crucial to leverage these insights to develop targeted regulatory interventions, enhance product safety standards, and raise public awareness about potential risks. By doing so, we can ensure a safer marketplace for all consumers and foster a more robust public health framework.
-
+# Conclusion
+This analysis of adverse event data for the food and cosmetics industries provides essential insights into safety issues and trends. The results of this project are expected to inform future product safety regulations and support the FDA’s goal of improving public health by mitigating potential risks associated with food and cosmetic products.
